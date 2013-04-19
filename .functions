@@ -15,7 +15,6 @@ function calc() {
 	fi
 	printf "\n"
 }
-
 # Create a new directory and enter it
 function mkd() {
 	mkdir -p "$@" && cd "$@"
