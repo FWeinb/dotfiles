@@ -1,5 +1,5 @@
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH"
+# Add `~/bin` to the `$PATH` Add php5 to $PATH`
+export PATH="$HOME/bin:$HOME/BlitzMax/bin:$PATH"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -9,6 +9,8 @@ for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
 done
 unset file
 
+# Show title relative to home
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 
 # init rvm
 source ~/.rvm/scripts/rvm
