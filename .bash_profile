@@ -1,5 +1,4 @@
-# Add `~/bin` to the `$PATH` Add php5 to $PATH`
-export PATH="$HOME/bin:$HOME/BlitzMax/bin:$PATH"
+export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -11,6 +10,7 @@ unset file
 
 # Show title relative to home
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # init rvm
 source ~/.rvm/scripts/rvm
@@ -41,8 +41,7 @@ complete -W "NSGlobalDomain" defaults
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall
 
-# Autocomplete Grunt commands
-which grunt > /dev/null && eval "$(grunt --completion=bash)"
-
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
+
+source ~/.iterm2_shell_integration.bash
