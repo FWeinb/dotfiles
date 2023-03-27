@@ -11,9 +11,6 @@ alias g="git"
 alias h="history"
 
 
-# Always enable colored `grep` output
-alias grep="grep --color=auto"
-
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
