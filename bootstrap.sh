@@ -14,4 +14,10 @@ else
 	fi
 fi
 unset doIt
-source ~/.bash_profile
+
+brew install pure
+
+brew install --cask bambu-studio iina logi-options+ the-unarchiver google-chrome iterm2 \
+		 setapp visual-studio-code hiddenbar little-snitch sublime-text
+
+source ~/.zshrc
